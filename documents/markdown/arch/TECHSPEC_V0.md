@@ -232,3 +232,6 @@ Note that currently a recommended Hub Key field has been defined only for photog
 |Photographic images|http://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata |IPTC Core Rights: Usage Terms|
 
 **TBD:** Include an example of the XML?
+
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

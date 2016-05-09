@@ -1,7 +1,3 @@
-<!-- howto-ssl.md
- Written by BenM, Thu Oct  1 18:23:00 2015
- -->
-
 # How to set up and test authenticated access to Hub services
 
 ## Contents
@@ -20,7 +16,7 @@ This How-to provides a step by step guide to setting up and testing
 SSL authentication against Open Permissions Platform services.
 
 For issues and support, contact
-[support-copyrighthub@cde.catapult.org.uk](mailto:support-copyrighthub@cde.catapult.org.uk) by email.
+[support@openpermissions.org](mailto:support@openpermissions.org) by email.
 
 ### See also
 
@@ -29,7 +25,7 @@ guide to the Accounts service.~~
 
 __NOTE:__ The Accounts service UI is not yet available to third parties
 using the current Hub release. Contact
-[support-copyrighthub@cde.catapult.org.uk](mailto:support-copyrighthub@cde.catapult.org.uk) by email
+[support@openpermissions.org](mailto:support@openpermissions.org) by email
 for more information about registration.
 
 ## Overview
@@ -358,3 +354,6 @@ certificate files:
 |`COMODORSAAddTrustCA.crt`|Intermediate certificate|Y|
 |`COMODORSADomainValidationSecureServerCA.crt`|Root certificate|Y|
 |`www_yourdomain_com.crt`|SSL server certificate for your domain|Y|
+
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

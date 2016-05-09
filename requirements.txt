@@ -1,2 +1,2 @@
-git+ssh://git@github.com/catapultbamboo/file_translate.git@0.0.3
+file-translate==0.0.3
 grip==3.3.0
