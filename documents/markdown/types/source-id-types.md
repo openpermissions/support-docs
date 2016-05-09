@@ -1,7 +1,3 @@
-<!--
-(C) Copyright Digital Catapult Limited 2016
- -->
-
 # Source ID Types
 
 ## About
@@ -29,3 +25,6 @@ Currently supported source id types are
 | mirrorpixpictureid         | An image ID from [mirrorpix](http://www.mirrorpix.com/) |
 | ouimagespictureid          | An image ID from [Oxford University Images](http://www.oxforduniversityimages.com/) |
 | picscoutpictureid          | An image ID from [PicScout](http://www.picscout.com/) |
+
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

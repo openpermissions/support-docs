@@ -15,7 +15,7 @@
 
 This document provides a high level overview of the Open Permissions Platform, including system features and design principles. It is intended to provide basic orientation and context for those new to the project, as well as a first introduction for technical audiences.
 
-For information, issues, and support, contact [support-copyrighthub@cde.catapult.org.uk](mailto:support-copyrighthub@cde.catapult.org.uk) by email.
+For information, issues, and support, contact [support@openpermissions.org](mailto:support@openpermissions.org) by email.
 
 ### See also
 
@@ -214,3 +214,6 @@ To use the Open Permissions Platform, applications must be known to the system.
 In implementation terms, a decorator object is added to an endpoint.
 
 [Link TBD to forthcoming Security Principles doc]
+
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

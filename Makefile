@@ -1,4 +1,4 @@
-# (C) Copyright Connected Digital Economy Catapult Limited 2015
+# (C) Copyright Open Permissions Platform Coalition 2016
 .PHONY: clean requirements docs
 
 # You should not set these variables from the command line.

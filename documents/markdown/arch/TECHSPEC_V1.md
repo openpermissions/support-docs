@@ -99,3 +99,5 @@ The Hub Key **must not** contain Unicode characters, to ensure that it can be us
 Instead, when a Hub Key is generated the `resolver_id` is encoded using the Internationalized Domain Names in Applications (IDNA) ptotocol, see [RFC5891](https://www.ietf.org/rfc/rfc5891.txt). 
 The remaining components are percent encoded, see [RFC3987](https://www.ietf.org/rfc/rfc3987.txt) and [RFC3490](https://www.ietf.org/rfc/rfc3490.txt).
 
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
