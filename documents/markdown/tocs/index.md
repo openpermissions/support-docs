@@ -68,7 +68,6 @@ The following services expose public APIs:
 
 Developers may also find the following documents useful:
 
-+ The [Hub Key Technical Specification V1](
 + The [Hub Key Technical Specification V1](../arch/TECHSPEC_V1.md)
 provides a detailed discussion and description of Hub Keys and how
 they are used in OPP
