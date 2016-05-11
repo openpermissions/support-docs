@@ -7,7 +7,7 @@ Table of Contents
 * [Introduction](#user-content-introduction)
 * [Hub Key description](#user-content-hub-key-description)
   * [Examples](#user-content-examples)
-* [Common entity types](#user-content-currently-supported-entity-types)
+* [Currently supported entity types](#user-content-currently-supported-entity-types)
 * [Unicode](#user-content-unicode)
 
 # Introduction
