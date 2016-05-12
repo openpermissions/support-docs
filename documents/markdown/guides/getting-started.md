@@ -1,50 +1,72 @@
-Welcome to the developer documentation for the Open Permissions
-Platform (OPP). These notes aim to get you up and running quickly with
-the OPP public APIs.
+# APIs & Doc
 
-If you want to know more about the OPP platform, and what we built,
-and why, read X.
+## Support Documentation
 
-You can find a running instance of OPP at copyrighthub, a copyright
-works exchange for the UK powered by OPP. If you want to know more
-about the copyright hub, read Y.
+|||||
+|----|---|---|---|
+|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md)
 
-Because the copyright hub is built on OPP, the OPP REST APIs are
-exposed at the copyright hub endpoint copyrighthub. You can make calls
-against these endpoints to onboard and query asset metatdata.
+### Getting started with OPP
 
-## What we built and how to use it
+OPP is a microservice archictecture platform. The core microservices
+that offer public APIs are the **Onboarding** and **Query** services
+that enable application clients to onboard metadata assets to an OPP
+repository, link assets to offers, and query an OPP repository for
+**assets**, **licensors** and **offers**.
 
-OPP is a platform that links licensing information in the form of
-offers for use, with assets, that's to say copyright works.
+The **Authentication** service allows registered client services to
+authenticate and request tokens to authorise platform access,
+following an OAuth 2.0 flow.
 
-An OPP repository stores this information as linked data, and uises an
-RDF ontology, the open linked data model, to build and navigate the
-linked structures.
+[How to authenticate with Open Permissions Platform services](https://github.com/openpermissions/auth-srv/blob/master/documents/markdown/how-to-auth.md#services-summary)
+provides a list of the platform microservices, public APIs, and their
+authentication requirements.
 
-Because the OPP model is open, you can customise the model by
-extending it to inclde additional concepts. In fact, you can plug in a
-completely different model if you want to specialise OPP for some
-otyher knowledge domain.
+An OPP repository is a triplestore that stores linked data, and uses
+an RDF ontology, the **Open Licensing** model, to build and interpret
+the linked structures.
 
-OPP is implemnented as a set of cooperating microservices:
+#### Concepts and terminology
 
-List them and what they do, include that the repo is a triple store:
+At heart OPP is a simple mapping service that can be used to:
 
-+
-+
-+
++ Generate identifiers for assets
++ Query on identifiers to retrieve assets and licensing data about
+  them
 
-## Try it for yoursefl
+The following terminology will help you understand the concepts around
+which OPP is designed:
 
-Query a well-known asset
++ Hub Key &mdash;
++ Asset &mdash;
++ Offer &mdash;
++ Agreement &mdash;
++ Open Licensing &mdash;
 
-To see how queries work, you don't need anything more than a command
-line and cURL, or other language of your choice that allows you to
-fire an HTTP request from the command line. See the Query How to for a
-code example you can snip. Querying for the following asset (which is
-preloaded as an example as part of the platform deployment) should
-always return valid data if your code is correct.
+Because OPP and Open Licensing are open source, you can customise the
+OPP data model by extending it to include additional concepts. In
+fact, you can plug in a completely different model if you want to
+specialise OPP for some other knowledge domain.
+
+### Hands on
+
+To get a feel for how OPP works, the following sections demonstrate
+the basic public APIs.
+
+>**Note:** that because the first live platform powered by OPP is the
+>[Copyright Hub](http://www.copyrighthub.org/copyrighthub_org/community/),
+>all code examples in this documentation refer to the
+>`copyrighthub.org` endpoints. Substitute appropriate endpoints if you
+>are integrating with a different OPP instance.
+
+#### Query an asset
+
+To see how queries work, you just need a command line and cURL, or
+other language of your choice that allows you to fire an HTTP request
+from the command line. See the Query How to for a code example you can
+snip. Querying for the following asset (which is preloaded as an
+example as part of the platform deployment) should always return valid
+data if your code is correct.
 
 You can query for:
 
@@ -122,3 +144,80 @@ XX
 
 
 
+
+You can find a running instance of OPP at copyrighthub, a copyright
+works exchange for the UK powered by OPP. If you want to know more
+about the copyright hub, read Y.  Currently, live services
+
+For developers wanting to write application clients that integrate
+with OPP services, a live instance of the OPP platform powers the
+[Open Permissions Platform](http://www.openpermissions.org) and serves as a testbed
+for application and service developers and for third-party engagement.
+
+
+example the copyright hub, you can use the APIs to write client
+you can 
+
+
+The OPP offers public APIs that enable application clients to onboard
+metadata **assets** to an OPP platform instance and to query against
+those assets for licensing information including **licensors** and
+**offers**.
+
+
+API who want to
+engage with an existing OPP platform instance, for example the
+copyright hub, you can use the APIs to write client appliactions that
+allow users to onboard and query assets and offers.
+
+Check ouyt some of the existing copyright hub clisnts to see what's
+possible.
+
+
+
+
+our "hub in a box" releases provide pre-baked
+ready-to-deploy platform images.
+
+
+
+
+You can find 
+
+### Clients dev
+
+
+### Deploy devs
+
+
+Current;y we support the following platforms:
+
+X
+B
+A
+
+
+
+If you are a developer
+
+
+### Overview
+
+
+
+
+These notes aim to get you up and
+running quickly with the OPP public APIs.  The Open Permissions
+Platform (OPP) is now available to developers as an open source
+project.
+
+
+
+
+For developers wanting to write application clients that integrate
+with OPP services, a live instance of the OPP platform powers the
+[Open Permissions Platform](http://www.openpermissions.org) and serves as a testbed
+for application and service developers and for third-party engagement.
+
+The following topics document the OPP public APIs and provide other
+useful information.
