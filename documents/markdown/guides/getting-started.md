@@ -15,10 +15,11 @@ repository, link assets to offers, and query an OPP repository for
 **assets**, **licensors** and **offers**.
 
 An OPP repository is a triplestore that stores linked data, and uses
-an RDF ontology, the **Open Licensing** model, to build and interpret
-the linked structures. The **Repository Service** does **not** expose
-public APIs, but is accessed via the **Onboarding** and **Query**
-services.
+an RDF ontology, the **Open Licensing** extension to the W3C
+[ODRL](https://www.w3.org/community/odrl/) policy language, to build
+and interpret the linked structures. The **Repository Service** does
+**not** expose public APIs, but is accessed via the **Onboarding** and
+**Query** services.
 
 The **Authentication** service allows registered client services to
 authenticate and request tokens to authorise platform access,
@@ -32,7 +33,8 @@ authentication requirements.
 
 At heart OPP is a simple mapping service that is used to:
 
-+ Generate identifiers for assets
++ Onboard assets and generate unique identifiers for each asset
+  onboarded
 + Query on identifiers to retrieve assets and licensing data about
   them
 
@@ -45,17 +47,17 @@ which OPP is designed:
 + Agreement &mdash;
 + Open Licensing &mdash;
 
-Because OPP and Open Licensing are open source, you can customise the
-OPP data model by extending it to include additional concepts. In
-fact, you can plug in a completely different model if you want to
-specialise OPP for some other knowledge domain.
+Because OPP and the Open Licensing extension are open source, you can
+customise the OPP data model by extending it to include additional
+concepts. In fact, you can plug in a completely different model if you
+want to specialise OPP for some other knowledge domain.
 
 ### Hands on with the APIs
 
 To get a feel for how OPP works, the following sections demonstrate
 the basic public APIs.
 
->**Note:** that because the first live platform powered by OPP is the
+>**Note:** Because the first live platform powered by OPP is the
 >[Copyright Hub](http://www.copyrighthub.org/copyrighthub_org/community/),
 >all code examples in this documentation refer to the
 >`copyrighthub.org` endpoints. Substitute appropriate endpoints if you
