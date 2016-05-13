@@ -28,7 +28,7 @@ the linked structures.
 
 #### Concepts and terminology
 
-At heart OPP is a simple mapping service that can be used to:
+At heart OPP is a simple mapping service that is used to:
 
 + Generate identifiers for assets
 + Query on identifiers to retrieve assets and licensing data about
@@ -48,7 +48,7 @@ OPP data model by extending it to include additional concepts. In
 fact, you can plug in a completely different model if you want to
 specialise OPP for some other knowledge domain.
 
-### Hands on
+### Hands on with the APIs
 
 To get a feel for how OPP works, the following sections demonstrate
 the basic public APIs.
@@ -63,161 +63,127 @@ the basic public APIs.
 
 To see how queries work, you just need a command line and cURL, or
 other language of your choice that allows you to fire an HTTP request
-from the command line. See the Query How to for a code example you can
-snip. Querying for the following asset (which is preloaded as an
-example as part of the platform deployment) should always return valid
-data if your code is correct.
+from the command line.
 
-You can query for:
+Copy the **Query for asset by Hub Key** one line code snip from [How to use the Query Service](https://github.com/openpermissions/query-srv/blob/master/documents/markdown/how-to-query.md), paste into a command line console, and execute.
 
-+
-+
-+
+The **Query Service** returns the asset data for the asset identified
+by the example Hub Key:
 
-See rge how to and API ref for dteails.
+```https://openpermissions.org/s1/hub1/80defa84505f48108858ab653d00aa2f/asset/6732a947b42e43efab8561a856f3352a```
 
-Onboard an asset
+You can also simply paste the Hub Key into a browser navigation bar;
+the asset data will be returned, assuming the asset has been onboarded
+to the OPP platform identified by the Hub Key (in this case a hub that
+integrates with the live Copyright Hub service).
 
-OPP APIs required authenticated access, with the exception that the
-Query service also accepts unauthenticated calls.
+Because the **Query Service** accepts unauthenticated requests, the
+code required to call the REST API is extremely simple.
 
-To try out the onboarding service, follow the steps in Accounts how to
-to register with the OPP hub. It's straihghtforward, just respond to
-the automated reply and you're set.
+For other **Query Service** endpoints, see the
+[API reference](https://github.com/openpermissions/query-srv/blob/master/documents/apiary/api.md).
 
-Then log in, create a test service, create a terst repository, and
-snip the code in the How to onboard to onboard an asset. Once you've
-onboared an asset, you can query for it.
+#### Onboard an asset
 
-Unbless you link the asset to an offer (which you can do when you
-first onboard or by re-onboarding with an offer ID), your query won't
-return offer information.
+Onboarding requires a bit more setting up. Because the **Onboarding
+Service** requires authentication, to call its endpoints you must
+first register. Registration is simple, and acceptance is automatic,
+but it involves a few steps:
+  1. Register yourself as a **user** to acquire user credentials (name and
+    password)
+  1. Login with your new account and create or join an **organisation**
+  1. Create a **service** owned by the organisation, the service is
+     assigned **id** and **secret** credentials on creation
+  1. Create a **repository** for the service
 
-You can try onboarding with a generic Creative Commans offer, using
-the offer ID XX.
+See the **Accounts Service** guide
+[How to create and manage accounts, services, and users](https://github.com/openpermissions/accounts-srv/blob/master/documents/markdown/how-to-register.md)
+for a step by step walk through.
+
+When you've successfully registered, you can onboard assets to your
+new repository.
+
+An **asset** is just some metadata in an appropriate format, for
+example the following Python string is an asset, defined by a CSV
+header row and a single line of data:
+
+```python
+csv_data = 'source_id_types,source_ids,offer_ids,description\nexamplecopictureid,DSC_00A987,,"Cannubi cru vineyard at sunset, Barolo, Piemonte, Italy"'
+```
+
+To onboard this data, your code needs to do two things:
+
+1. Request an OAuth **access token** from the **Authentication
+   Service**, supplying your service **id** and **secret**
+2. Call the **Onboarding Service** `assets` endpoint, specifying the
+**repository id** in the URL, supplying the **access token** as
+`Bearer` in the HTTP `post` authorization header, and the **asset**
+data in the `post` body
+
+All told, in Python for example it's less than a dozen lines of
+code. You can copy and paste the code example from
+[How to use the Onboarding Service](https://github.com/openpermissions/onboarding-srv/blob/master/documents/markdown/how-to-onboard.md),
+which should work out of the box.
+
+When you query an asset you have onboarded, your query won't return
+offer information unless you link the asset to an offer, either when
+you first onboard, or by re-onboarding the asset with an offer
+ID. Supply `offer_ids` in the appropriate CSV field (or JSON
+equivalent, if you onboard as JSON).
+
+You can use the **offer configurator** tool from the **Accounts
+Service** web UI to create a minimal offer and load it into your
+repository. Onboard an asset with the offer id, and then query on the
+asset id to see how the offer is returned. See the
+[Accounts Service guide](https://github.com/openpermissions/accounts-srv/blob/master/documents/markdown/how-to-register.md)
+for a step by step walk through of creating a minimal offer.
+
+For other **Onboarding Service** endpoints, see the
+[API reference](https://github.com/openpermissions/onboarding-srv/blob/master/documents/apiary/api.md).
+
+### Application client development
+
+If you want to engage with an existing OPP platform instance, for
+example the [Copyright Hub](http://www.copyrighthub.org), the
+[previous section](#hands-on-with-the-apis) will have given you a feel for
+how to use the APIs.
+
+You can also take a look at some of the Copyright Hub partner and
+client services, listed on their
+[developer portal](http://developer.copyrighthub.org/), to get a feel
+for what's possible with OPP.
+
+For example, the Copyright Hub demo service implements right/left
+click on displayed images to retrieve offers from Hub Keys or image
+identifiers, to enable shopping cart purchases.
 
 ## Contribute, extend, or deploy
 
 OPP is an open source project.
 
-Youi can find the code in GitHub at XX
+You can find the code in GitHub at [`https://github.com/openpermissions/`](https://github.com/openpermissions/).
 
-### Contributors devs
+The repositories are organised one for each microservice or library,
+where **services** are implemented as servers and named with the
+`-srv` postfix, and **libraries** have fish names. Additional
+repositories contain miscellaneous UI or client code, test code, model
+definitions, and documentation.
 
-We welcome contributions from developers who want to extend, improve,
-optimise, or add to the code base.
+You are invited to browse, fork, and experiment.
 
-A word about policy.
+Pull requests from forks will be reviewed by the OPP engineering team,
+and we look forward to receiving your contributions.
 
-### Clients dev
+There are no restrictions on usage, other than those specified in the
+licences you can find in the repositories.
 
-If you want tp engage with an existing OPP platform instance, for
-example the copyright hub, you can use the APIs to write client
-appliactions that allow users to onboard and query assets and offers.
+### Deploying OPP
 
-Check ouyt some of the existing copyright hub clisnts to see what's
-possible.
+We release ready-to-deploy "hub-in-a-box" images that you can use to
+spin up your own OPP instance and run your own services or complete
+platform for public or internal organisational use.
 
-### Deploy devs
+Currently we support Amazon AWS images.
 
-We publish redy-to-deploy images you can use to spin up your own
-hub. You can use OPP to create your own service, for piblic or
-internal organisational use.
-
-Current;y we support the following platforms:
-
-X
-B
-A
-
-## Enjoy
-
-XX
-
-
-
-
-
-
-
-
-
-
-
-
-You can find a running instance of OPP at copyrighthub, a copyright
-works exchange for the UK powered by OPP. If you want to know more
-about the copyright hub, read Y.  Currently, live services
-
-For developers wanting to write application clients that integrate
-with OPP services, a live instance of the OPP platform powers the
-[Open Permissions Platform](http://www.openpermissions.org) and serves as a testbed
-for application and service developers and for third-party engagement.
-
-
-example the copyright hub, you can use the APIs to write client
-you can 
-
-
-The OPP offers public APIs that enable application clients to onboard
-metadata **assets** to an OPP platform instance and to query against
-those assets for licensing information including **licensors** and
-**offers**.
-
-
-API who want to
-engage with an existing OPP platform instance, for example the
-copyright hub, you can use the APIs to write client appliactions that
-allow users to onboard and query assets and offers.
-
-Check ouyt some of the existing copyright hub clisnts to see what's
-possible.
-
-
-
-
-our "hub in a box" releases provide pre-baked
-ready-to-deploy platform images.
-
-
-
-
-You can find 
-
-### Clients dev
-
-
-### Deploy devs
-
-
-Current;y we support the following platforms:
-
-X
-B
-A
-
-
-
-If you are a developer
-
-
-### Overview
-
-
-
-
-These notes aim to get you up and
-running quickly with the OPP public APIs.  The Open Permissions
-Platform (OPP) is now available to developers as an open source
-project.
-
-
-
-
-For developers wanting to write application clients that integrate
-with OPP services, a live instance of the OPP platform powers the
-[Open Permissions Platform](http://www.openpermissions.org) and serves as a testbed
-for application and service developers and for third-party engagement.
-
-The following topics document the OPP public APIs and provide other
-useful information.
+<!-- Copyright Notice -->
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

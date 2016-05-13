@@ -39,8 +39,8 @@ activities in the open licensing domain, we release ready-to-deploy
 individual microservices and build out your own platform, whether for
 public, commercial, or internal organisational use.
 
-We welcome **contributors** who want to extend, improve,
-optimise, or add to the code base.
+We welcome **contributors** who want to extend, improve, optimise, or
+add to the code base.
 
 ### OPP APIs
 
@@ -99,9 +99,9 @@ provides a detailed discussion and description of Hub Keys and how
 they are used in OPP
 
 + For developers of application clients that integrate with the
-  [Open Permissions Platform](http://www.openpermissions.org) OPP instance,
-  [Source ID Types](../types/source-id-types.md)
-  lists the source asset types currently supported by that instance
+  [Copyright Hub](http://www.copyrighthub.org/) OPP instance,
+  [Source ID Types](../types/source-id-types.md) lists the source
+  asset types currently supported by that instance
 
 <!-- Copyright Notice -->
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
