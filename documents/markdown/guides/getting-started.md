@@ -2,8 +2,8 @@
 
 ## Support Documentation
 
-|||||
-|----|---|---|---|
+||||||
+|----|---|---|---|---|
 |[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md)
 
 ### Getting started with OPP

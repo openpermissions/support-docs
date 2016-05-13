@@ -2,8 +2,8 @@
 
 ## Support Documentation
 
-|||||
-|----|---|---|---|
+||||||
+|----|---|---|---|---|
 |Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md)
 
 ### Welcome
