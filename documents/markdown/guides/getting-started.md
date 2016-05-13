@@ -14,6 +14,12 @@ that enable application clients to onboard metadata assets to an OPP
 repository, link assets to offers, and query an OPP repository for
 **assets**, **licensors** and **offers**.
 
+An OPP repository is a triplestore that stores linked data, and uses
+an RDF ontology, the **Open Licensing** model, to build and interpret
+the linked structures. The **Repository Service** does **not** expose
+public APIs, but is accessed via the **Onboarding** and **Query**
+services.
+
 The **Authentication** service allows registered client services to
 authenticate and request tokens to authorise platform access,
 following an OAuth 2.0 flow.
@@ -21,10 +27,6 @@ following an OAuth 2.0 flow.
 [How to authenticate with Open Permissions Platform services](https://github.com/openpermissions/auth-srv/blob/master/documents/markdown/how-to-auth.md#services-summary)
 provides a list of the platform microservices, public APIs, and their
 authentication requirements.
-
-An OPP repository is a triplestore that stores linked data, and uses
-an RDF ontology, the **Open Licensing** model, to build and interpret
-the linked structures.
 
 #### Concepts and terminology
 
