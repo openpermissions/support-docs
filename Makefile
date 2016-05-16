@@ -27,6 +27,12 @@ AUTH_DOC_DIR_OUT    = $(BUILDDIR)/auth
 # Directory to find authentication markdown docs
 AUTH_DOC_DIR_IN     = $(MARKDOWN_DOC_DIR_IN)/auth
 
+# Directory to output guides markdown converted docs to
+GUIDES_DOC_DIR_OUT  = $(BUILDDIR)/guides
+
+# Directory to find guides markdown docs
+GUIDES_DOC_DIR_IN   = $(MARKDOWN_DOC_DIR_IN)/guides
+
 # Directory to output tocs markdown converted docs to
 TOCS_DOC_DIR_OUT    = $(BUILDDIR)/tocs
 
@@ -54,6 +60,7 @@ GRIP_SWITCHES       =
 # Create list of target .html file names to be created based on all .md files found in the 'doc directory'
 md_docs :=	$(patsubst $(ARCH_DOC_DIR_IN)/%.md,$(ARCH_DOC_DIR_OUT)/%.html,$(wildcard $(ARCH_DOC_DIR_IN)/*.md)) \
 			$(patsubst $(AUTH_DOC_DIR_IN)/%.md,$(AUTH_DOC_DIR_OUT)/%.html,$(wildcard $(AUTH_DOC_DIR_IN)/*.md)) \
+			$(patsubst $(GUIDES_DOC_DIR_IN)/%.md,$(GUIDES_DOC_DIR_OUT)/%.html,$(wildcard $(GUIDES_DOC_DIR_IN)/*.md)) \
 			$(patsubst $(TOCS_DOC_DIR_IN)/%.md,$(TOCS_DOC_DIR_OUT)/%.html,$(wildcard $(TOCS_DOC_DIR_IN)/*.md)) \
 			$(patsubst $(TYPES_DOC_DIR_IN)/%.md,$(TYPES_DOC_DIR_OUT)/%.html,$(wildcard $(TYPES_DOC_DIR_IN)/*.md)) \
 			$(patsubst $(VERSION_DOC_DIR_IN)/%.md,$(VERSION_DOC_DIR_OUT)/%.html,$(wildcard $(VERSION_DOC_DIR_IN)/*.md)) \
@@ -72,8 +79,14 @@ $(ARCH_DOC_DIR_OUT)/%.html : $(ARCH_DOC_DIR_IN)/%.md
 	$(GRIP_APP) $(GRIP_SWITCHES) $< --export $@
 	file_translate -c $(DOC_DIR)/translate.json -i $@ -o $@
 
-# Dependencies of .html document files created from files in the 'authentication doc directory'
+# Dependencies of .html document files created from files in the 'auth doc directory'
 $(AUTH_DOC_DIR_OUT)/%.html : $(AUTH_DOC_DIR_IN)/%.md
+	mkdir -p $(dir $@)
+	$(GRIP_APP) $(GRIP_SWITCHES) $< --export $@
+	file_translate -c $(DOC_DIR)/translate.json -i $@ -o $@
+
+# Dependencies of .html document files created from files in the 'guides doc directory'
+$(GUIDES_DOC_DIR_OUT)/%.html : $(GUIDES_DOC_DIR_IN)/%.md
 	mkdir -p $(dir $@)
 	$(GRIP_APP) $(GRIP_SWITCHES) $< --export $@
 	file_translate -c $(DOC_DIR)/translate.json -i $@ -o $@
