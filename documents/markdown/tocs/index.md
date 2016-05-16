@@ -29,7 +29,7 @@ with an OPP instance, [the links below](#opp-apis) provide **How-tos**
 and **API references** for the OPP public APIs.
 
 If you are new to OPP, the
-[getting started](../guides/getting-started.md) guide introduces basic
+[Getting started](../guides/getting-started.md) guide introduces basic
 platform concepts and provides ready-to-run code examples that will
 get you up and running quickly.
 
