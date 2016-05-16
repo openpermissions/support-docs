@@ -4,7 +4,7 @@
 
 ||||||
 |----|---|---|---|---|
-|Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md)
+|Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
 
 ### Welcome
 
@@ -29,7 +29,7 @@ with an OPP instance, [the links below](#opp-apis) provide **How-tos**
 and **API references** for the OPP public APIs.
 
 If you are new to OPP, the
-[getting started](../guides/getting-started.md) guide introduces basic
+[Getting started](../guides/getting-started.md) guide introduces basic
 platform concepts and provides ready-to-run code examples that will
 get you up and running quickly.
 
@@ -73,7 +73,7 @@ use cases.
 
 #### Services
 
-The following OPP micoroservices expose public APIs:
+The following OPP microservices expose public APIs:
 
 + [Accounts Service](account-toc.md) &mdash; Sign-up to an OPP
   platform instance and create and manage accounts, services, and
@@ -87,7 +87,7 @@ clients must be registered with the OPP instance to use this service
 **assets**, **licensors** and **offers** by asset ID or Hub Key. This
 is an open service for which registration is not required
 
-+ [Authentication Service](auth-toc.md) &mdash; Request OAuth access
++ [Auth Service](auth-toc.md) &mdash; Request OAuth access
   tokens required to access authenticated OPP services
 
 ### Other useful information
