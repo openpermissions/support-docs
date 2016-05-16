@@ -4,7 +4,7 @@
 
 ||||||
 |----|---|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md) |
+|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
 
 ### Getting started with OPP
 
@@ -21,7 +21,7 @@ policy language, to build and interpret the linked structures. The
 **Repository Service** does expose public APIs, but is typically
 accessed via the **Onboarding** and **Query** services.
 
-The [**Authentication**](auth-toc.md) service allows registered client
+The [**Auth**](auth-toc.md) service allows registered client
 services to authenticate and request tokens to authorise platform
 access, following an OAuth 2.0 flow.
 
@@ -132,7 +132,7 @@ Each additional row of data defines a new asset.
 
 To onboard this data, your code needs to do two things:
 
-1. Request an OAuth **access token** from the **Authentication
+1. Request an OAuth **access token** from the **Auth
    Service**, supplying your service **client id** and **secret**
 2. Call the **Onboarding Service** `assets` endpoint, specifying the
 **repository id** in the URL, supplying the **access token** as
@@ -158,7 +158,7 @@ asset id to see how the offer is returned. See the
 for a step by step guide to creating a minimal offer.
 
 Each **Onboarding Service** call should pair a token request to the
-**Authentication Service** with a call to an Onboarding endpoint,
+**Auth Service** with a call to an Onboarding endpoint,
 supplying the new access token. This ensures that your code will not
 fail because a token expires during a long transaction. See the
 [How to](https://github.com/openpermissions/onboarding-srv/blob/master/documents/markdown/how-to-onboard.md)

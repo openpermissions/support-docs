@@ -4,7 +4,7 @@
 
 ||||||
 |----|---|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | Onboarding Service | [Authentication Service](auth-toc.md) |
+|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | Onboarding Service | [Auth Service](auth-toc.md) |
 
 ### Onboarding Service
 

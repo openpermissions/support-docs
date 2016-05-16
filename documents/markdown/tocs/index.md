@@ -4,7 +4,7 @@
 
 ||||||
 |----|---|---|---|---|
-|Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md) |
+|Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
 
 ### Welcome
 
@@ -87,7 +87,7 @@ clients must be registered with the OPP instance to use this service
 **assets**, **licensors** and **offers** by asset ID or Hub Key. This
 is an open service for which registration is not required
 
-+ [Authentication Service](auth-toc.md) &mdash; Request OAuth access
++ [Auth Service](auth-toc.md) &mdash; Request OAuth access
   tokens required to access authenticated OPP services
 
 ### Other useful information
