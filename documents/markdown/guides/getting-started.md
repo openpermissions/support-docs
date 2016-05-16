@@ -8,10 +8,9 @@
 
 ### Getting started with OPP
 
-OPP is a microservice architecture platform. Public APIs to the
+OPP has a microservice architecture. Public APIs to the
 [**Onboarding**](onboard-toc.md) and [**Query**](query-toc.md)
-services enable application clients and external services (for
-example, other OPP instances) to onboard metadata **assets** to an OPP
+services enable application clients and external services to onboard metadata **assets** to an OPP
 **repository**, link assets to **offers**, and query an OPP repository
 for assets, offers, and **licensors**.
 
@@ -19,7 +18,7 @@ An OPP repository is a triplestore that stores linked data, and uses
 an RDF ontology, the OPP **Open Licensing** profile extension to the
 W3C [ODRL](https://www.w3.org/community/odrl/) Version 2.1 Core Model
 policy language, to build and interpret the linked structures. The
-**Repository Service** does **not** expose public APIs, but is
+**Repository Service** does expose public APIs, but is typically
 accessed via the **Onboarding** and **Query** services.
 
 The [**Authentication**](auth-toc.md) service allows registered client
@@ -55,11 +54,10 @@ which OPP is designed:
 + Licensor &mdash;
 + Open Licensing &mdash;
 
-Because both OPP and the Open Licensing extension are open source, you
-can customise the OPP data model to extend the base concepts. In fact,
-you can plug in a completely different model if you want to specialise
-OPP for some other knowledge domain for which it serves as a mapping
-engine.
+Because both OPP and the Open Permision ODRL extension are open source, you
+can customise the OPP data model to extend the base concepts. Essentially,
+you can plug in a different profile if you want to specialise
+OPP for some other knowledge domain.
 
 ### Hands on with the APIs
 
