@@ -4,7 +4,7 @@
 
 ||||||
 |----|---|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
+|[Overview](../tocs/index.md) | [Accounts Service](../tocs/account-toc.md) | [Query Service](../tocs/query-toc.md) | [Onboarding Service](../tocs/onboard-toc.md) | [Auth Service](../tocs/auth-toc.md) |
 
 ### Getting started with OPP
 
