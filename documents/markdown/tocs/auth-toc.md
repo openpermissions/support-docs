@@ -4,16 +4,16 @@
 
 ||||||
 |----|---|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | Authentication Service |
+|[Overview](index.md) | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | Auth Service |
 
-### Authentication Service
+### Auth Service
 
-Use the Authentication Service to request an OAuth 2.0 access token
-before calling an authenticated OPP API.
+Use the Auth Service to request an OAuth 2.0 access token before
+calling an authenticated OPP API.
 
-You must supply client credentials for the application client or
-external service when calling the Authentication Service, as described
-in the API documentation below.
+Calling the Auth Service requires client credentials, which means that
+only registered application clients or external services can call
+authenticated OPP APIs.
 
 #### API documentation
 
