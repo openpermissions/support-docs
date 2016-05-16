@@ -2,9 +2,9 @@
 
 ## Support Documentation
 
-|||||
-|----|---|---|---|
-|[Overview](index.md) | Accounts Service | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) |
+||||||
+|----|---|---|---|---|
+|[Overview](index.md) | Accounts Service | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md) |
 
 ### Account Service UI
 

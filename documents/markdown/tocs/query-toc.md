@@ -2,9 +2,9 @@
 
 ## Support Documentation
 
-|||||
-|----|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | Query Service | [Onboarding Service](onboard-toc.md) |
+||||||
+|----|---|---|---|---|
+|[Overview](index.md) | [Accounts Service](account-toc.md) | Query Service | [Onboarding Service](onboard-toc.md) | [Authentication Service](auth-toc.md) |
 
 ### Query Service
 
