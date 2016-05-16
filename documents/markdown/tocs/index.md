@@ -73,7 +73,7 @@ use cases.
 
 #### Services
 
-The following OPP micoroservices expose public APIs:
+The following OPP microservices expose public APIs:
 
 + [Accounts Service](account-toc.md) &mdash; Sign-up to an OPP
   platform instance and create and manage accounts, services, and
