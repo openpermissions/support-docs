@@ -1,12 +1,12 @@
 {
   "translations": [{
-    "search": "(\\s*href\\s*=\\s*\")((?!https:|http:).*?)(\\.)(md)(\")",
-    "replace": "\\1\\2\\3html\\5"
+    "search": "(\\s*href\\s*=\\s*\")((?!https:|http:).*?)(\\.)(md)((#.*)?)(\")",
+    "replace": "\\1\\2\\3html\\5\\7"
   }, {
-    "search": "(https:\/\/github.com\/openpermissions\/)(.*?)(-srv\/blob\/)(.*?\/)(.*?\/)(markdown\/)(.*)(\\.md)(\")",
-    "replace": "../../../services/\\2/docs/service/html/\\7.html\\9"
+    "search": "(https:\/\/github.com\/openpermissions\/)(.*?)(-srv\/blob\/)(.*?\/)(.*?\/)(markdown\/)(.*)(\\.md)((#.*)?)(\")",
+    "replace": "../../../services/\\2/docs/service/html/\\7.html\\9\\11"
   }, {
-    "search": "(https:\/\/github.com\/openpermissions\/)(.*?)(-srv\/blob\/)(.*?\/)(.*?\/)(apiary\/)(.*)(\\.md)(\")",
-    "replace": "../../../services/\\2/docs/api/html/\\7.html\\9"
+    "search": "(https:\/\/github.com\/openpermissions\/)(.*?)(-srv\/blob\/)(.*?\/)(.*?\/)(apiary\/)(.*)(\\.md)((#.*)?)(\")",
+    "replace": "../../../services/\\2/docs/api/html/\\7.html\\9\\11"
   }]
 }
