@@ -2,9 +2,9 @@
 
 ## Support Documentation
 
-||||||
-|----|---|---|---|---|
-|[Overview](index.md) | Accounts Service | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
+|||||||||||
+|----|---|---|---|---|---|---|---|---|---|
+|[Overview](index.md)  | Accounts Service | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | [Index Service](index-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
 
 ### Account Service UI
 

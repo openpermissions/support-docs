@@ -2,9 +2,9 @@
 
 ## Support Documentation
 
-||||||
-|----|---|---|---|---|
-|Overview | [Accounts Service](account-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Auth Service](auth-toc.md) |
+|||||||||||
+|----|---|---|---|---|---|---|---|---|---|
+|Overview | [Accounts Service](account-toc.md) | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | [Index Service](index-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
 
 ### Welcome
 
@@ -79,6 +79,15 @@ The following OPP microservices expose public APIs:
   platform instance and create and manage accounts, services, and
   repositories
 
++ [Auth Service](auth-toc.md) &mdash; Request OAuth access
+  tokens required to access authenticated OPP services
+  
++ [Identity Service](identity-toc.md) &mdash; Generate OPP Hub Keys 
+for different entity types. 
+  
++ [Index Service](index-toc.md) &mdash; Schedule the polling of 
+repository services for newly added **assets**, and query their location.
+
 + [Onboarding Service](onboard-toc.md) &mdash; Onboard metadata
 **assets** to an OPP repository and receive back Hub Keys. Application
 clients must be registered with the OPP instance to use this service
@@ -87,8 +96,13 @@ clients must be registered with the OPP instance to use this service
 **assets**, **licensors** and **offers** by asset ID or Hub Key. This
 is an open service for which registration is not required
 
-+ [Auth Service](auth-toc.md) &mdash; Request OAuth access
-  tokens required to access authenticated OPP services
++ [Repository Service](repository-toc.md) &mdash; Store and retrieve 
+**assets**, **licensors** and **offers** data from an OPP repository.
+
++ [Resolution Service](resolution-toc.md) &mdash; Resolve OPP IDs
+
++ [Transformation Service](transformation-toc.md) &mdash; Transform rights data 
+to a valid xml format.
 
 ### Other useful information
 
