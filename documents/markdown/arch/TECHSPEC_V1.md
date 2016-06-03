@@ -47,20 +47,26 @@ The Hub Key resolvable URL is composed from the Hub Key URI, with protocol and r
 
 ## Examples
 
+### Live Example
 With these values:
 * separator = `/`
 * resolver_id = `https://copyrighthub.org`
 * schema_version = `s1`
-* hub_id = `chf`
+* hub_id = `hub1`
 * entity_type = `asset`
-* repository_id = `14514543561346`
-* entity_id = `104113451433373`
+* repository_id = `7421a6d45d39616d17313a4248008608`
+* entity_id = `a5a177ba246f454bbc1ea315e07db873`
 
-the following Hub Key resolvable URL is generated (shown non-URL encoded) identifying an Asset that was onboarded through `chf` to `copyrighthub.org`:
-* https://copyrighthub.org/s1/chf/14514543561346/asset/104113451433373
+the following Hub Key resolvable URL is generated (shown non-URL encoded) identifying an Asset that was onboarded through `hub1` to `copyrighthub.org`:
 
-Note that this is a valid URL which resolves to Asset data held by the Open Permissions Platform. 
+* https://copyrighthub.org/s1/hub1/7421a6d45d39616d17313a4248008608/asset/a5a177ba246f454bbc1ea315e07db873
+
+Note that the example above is a valid URL which resolves to Asset data held by ExampleCo, a sample company created by the Open Permissions Platform. 
 For example, the URL can be pasted directly into a browser and navigated to.
+
+
+### Other Examples
+The below examples are not currently resolvable, but show example Hub Keys that could be generated using different values.
 
 * https://copyrighthub.org/s1/chf/1451451435345/asset/4514353134616
 * https://copyrighthub.org/s1/chf/1451451435345/offer/2523452354315
