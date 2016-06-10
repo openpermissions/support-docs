@@ -13,7 +13,7 @@
   + [Query an asset](#query-an-asset)
   + [Onboard an asset](#onboard-an-asset)
   [Application client development](#application-client-development)
-+ [Contribute, extend, or deploy](#contribute,-extend,-or-deploy)
++ [Contribute, extend, or deploy](#contribute-extend-or-deploy)
   + [Deploying OPP](#deploying-opp)
 
 ## About this document
@@ -25,11 +25,6 @@ are new to OPP.
 For issues and support, contact
 [support@openpermissions.org](mailto:support@openpermissions.org)
 by email.
-
-### See also
-
-+ [Open Permissions Platform Concepts](concepts.md) introduces and
-  defines the main concepts and terminology used in OPP
 
 ## Overview
 
@@ -76,8 +71,9 @@ which OPP is designed:
   Permissions Platform to locate an entity
 + Asset &mdash; an entity having potentially licensable content
 + Offer &mdash; terms of use offered for an asset
-
-For a fuller discussion of OPP concepts and terminology seemore details see [Open Permissions Platform Concepts](concepts.md).
++ Agreement &mdash; an offer agreed between a licensor and user
++ Licensor &mdash; a party that has the right to offer assets
++ Open Permissions Profile &mdash; the ODRL profile used by the Open Permissions Platform
 
 Because both OPP and the Open Permissions ODRL profile are open source, you
 can customise the OPP data model to extend the base concepts. Essentially,
