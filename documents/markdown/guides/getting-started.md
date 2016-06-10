@@ -13,7 +13,7 @@
   + [Query an asset](#query-an-asset)
   + [Onboard an asset](#onboard-an-asset)
   [Application client development](#application-client-development)
-+ [Contribute, extend, or deploy](#contribute,-extend,-or-deploy)
++ [Contribute, extend, or deploy](#contribute-extend-or-deploy)
   + [Deploying OPP](#deploying-opp)
 
 ## About this document
