@@ -26,11 +26,6 @@ For issues and support, contact
 [support@openpermissions.org](mailto:support@openpermissions.org)
 by email.
 
-### See also
-
-+ [Open Permissions Platform Concepts](concepts.md) introduces and
-  defines the main concepts and terminology used in OPP
-
 ## Overview
 
 OPP has a microservice architecture. Public APIs to the
