@@ -1,12 +1,37 @@
-# APIs & Doc
+<!--
+(C) Copyright Open Permissions Platform Coalition 2016
+ -->
 
-## Support Documentation
+# Getting started with OPP
 
-||||||
-|----|---|---|---|---|
-|[Overview](../tocs/index.md) | [Accounts Service](../tocs/account-toc.md) | [Query Service](../tocs/query-toc.md) | [Onboarding Service](../tocs/onboard-toc.md) | [Auth Service](../tocs/auth-toc.md) |
+## Contents
 
-### Getting started with OPP
++ [About this document](#about-this-document)
++ [Overview](#overview)
++ [Concepts and terminology](#concepts-and-terminology)
++ [Hands on with the APIs](#hands-on-with-the-apis)
+  + [Query an asset](#query-an-asset)
+  + [Onboard an asset](#onboard-an-asset)
+  [Application client development](#application-client-development)
++ [Contribute, extend, or deploy](#contribute,-extend,-or-deploy)
+  + [Deploying OPP](#deploying-opp)
+
+## About this document
+
+This document is an introduction to the Open Permissions Platform
+(OPP) APIs. It is the recommended starting point for developers who
+are new to OPP.
+
+For issues and support, contact
+[support@openpermissions.org](mailto:support@openpermissions.org)
+by email.
+
+### See also
+
++ [Open Permissions Platform Concepts](concepts.md) introduces and
+  defines the main concepts and terminology used in OPP
+
+## Overview
 
 OPP has a microservice architecture. Public APIs to the
 [**Onboarding**](onboard-toc.md) and [**Query**](query-toc.md)
@@ -31,7 +56,7 @@ authentication requirements.
 
 All APIs, public and internal, are RESTful.
 
-#### Concepts and terminology
+## Concepts and terminology
 
 At heart OPP is a simple mapping service that is used to:
 
@@ -51,16 +76,15 @@ which OPP is designed:
   Permissions Platform to locate an entity
 + Asset &mdash; an entity having potentially licensable content
 + Offer &mdash; terms of use offered for an asset
-+ Agreement &mdash; an offer agreed between a licensor and user
-+ Licensor &mdash; a party that has the right to offer assets
-+ Open Permissions Profile &mdash; the ODRL profile used by the Open Permissions Platform
+
+For a fuller discussion of OPP concepts and terminology seemore details see [Open Permissions Platform Concepts](concepts.md).
 
 Because both OPP and the Open Permissions ODRL profile are open source, you
 can customise the OPP data model to extend the base concepts. Essentially,
 you can plug in a different profile if you want to specialise
 OPP for some other knowledge domain.
 
-### Hands on with the APIs
+## Hands on with the APIs
 
 To get a feel for how OPP works, the following sections demonstrate
 the basic public APIs.
@@ -71,7 +95,7 @@ the basic public APIs.
 >`copyrighthub.org` endpoints. Substitute appropriate endpoints if you
 >are integrating with a different OPP instance.
 
-#### Query an asset
+### Query an asset
 
 To see how queries work, you just need a command line and cURL, or
 other language of your choice that allows you to fire an HTTP request
@@ -100,7 +124,7 @@ examples in the
 For details of other **Query Service** endpoints, see the
 [API reference](https://github.com/openpermissions/query-srv/blob/master/documents/apiary/api.md).
 
-#### Onboard an asset
+### Onboard an asset
 
 Onboarding requires a bit more setting up. Because the **Onboarding
 Service** requires authentication, to call its endpoints you must
@@ -168,7 +192,7 @@ for more details.
 For other **Onboarding Service** endpoints, see the
 [API reference](https://github.com/openpermissions/onboarding-srv/blob/master/documents/apiary/api.md).
 
-### Application client development
+## Application client development
 
 If you want to engage with an existing OPP platform instance, for
 example the [Copyright Hub](http://www.copyrighthub.org), the
@@ -187,7 +211,8 @@ few clicks from finding an image to acquiring a licence for use.
 
 ## Contribute, extend, or deploy
 
-OPP is an open source project. You can find the code in GitHub at [`https://github.com/openpermissions/`](https://github.com/openpermissions/).
+OPP is an open source project. You can find the code in GitHub at
+[`https://github.com/openpermissions/`](https://github.com/openpermissions/).
 
 The repositories are organised one for each microservice or library,
 where **services** are implemented as servers and named with the
