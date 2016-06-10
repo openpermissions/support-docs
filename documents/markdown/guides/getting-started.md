@@ -71,8 +71,9 @@ which OPP is designed:
   Permissions Platform to locate an entity
 + Asset &mdash; an entity having potentially licensable content
 + Offer &mdash; terms of use offered for an asset
-
-For a fuller discussion of OPP concepts and terminology seemore details see [Open Permissions Platform Concepts](concepts.md).
++ Agreement &mdash; an offer agreed between a licensor and user
++ Licensor &mdash; a party that has the right to offer assets
++ Open Permissions Profile &mdash; the ODRL profile used by the Open Permissions Platform
 
 Because both OPP and the Open Permissions ODRL profile are open source, you
 can customise the OPP data model to extend the base concepts. Essentially,
