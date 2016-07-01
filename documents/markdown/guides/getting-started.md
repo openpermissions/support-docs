@@ -96,7 +96,7 @@ functionality including:
   **Resolution Service**
 + Account management performed by the **Accounts Service**
 + Client authorisation/authentication performed by the
-  **Authentication Service**
+  **Auth Service**
 
 For more details about the individual services see the relevant [API
 documentation](../tocs/index.md#services).
