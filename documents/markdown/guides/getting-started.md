@@ -43,8 +43,8 @@ for asset usage easily discoverable on the web, and enabling permission
 Offers are defined using the W3C
 [ODRL](https://www.w3.org/community/odrl/) policy language.
 
-Offers, agreements, and asset metadata are stored in OPP
-**repositories** as linked-data within a triplestore.
+Offers, agreements, asset metadata, and the links that connect them are
+stored in OPP **repositories** as linked data within a triplestore.
 
 OPP uses an OAuth 2.0 flow to authorise and authenticate API requests.
 
