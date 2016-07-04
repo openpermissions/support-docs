@@ -40,16 +40,16 @@ another service it collaborates with is not running.
 
 OPP's primary client functions are to:
 
-+ Generate and return [Hub Keys]() from [entity]() data supplied by
-external application clients to the [Onboarding Service]()
-+ Return data requested by client calls to the [Query Service]()
++ Onboard [entity]() data from external application clients
++ Generate and return [Hub Keys]() that uniquely identify onboarded
+  entities
++ Return query results to application clients, keyed on various types
+  of entity [identifiers]() including Hub Keys
 
 Hub Keys serve as smart identifiers which encode an entity's type,
-[repository]() location, and other information, and can be resolved by
-the [Resolution Service]() to an individual web URI.
-
-Hub Keys can also be used as keys by the Query Service to query
-for data linked to an entity.
+[repository]() location, and other information. Hub Keys are also true
+URLs that can be resolved or redirected by the [Resolution Service]()
+to an individual web URI.
 
 OPP supports a small number of entity types, including [assets](),
 [offers](), and [agreements](). Details of supported entity types and
@@ -57,8 +57,8 @@ Hub Key structure can be found in the latest version of the
 [Hub Key Technical Specification](../arch/TECHSPEC_V1.md).
 
 [Onboarded]() data is built and stored in a triplestore as
-[linked data]() within an OPP repository managed by the Repository
-Service on behalf of each external service.
+[linked data]() within an OPP repository managed by the [Repository
+Service]() on behalf of each external service.
 
 With a few exceptions API calls must be authenticated, using OAuth 2.0
 [client credentials]() which are provided to external services by the
@@ -78,22 +78,34 @@ in the OPP, organised alphabetically by term.
 
 ## Terminology
 
+#### access token
 
-
-####
-
-####
-
-#### agreement
-
-An offer agreed between a licensor and a user.
+An OAuth 2.0 **access token** must be supplied to authorise access to
+an authenticated OPP API.
 
 #### Accounts Service
 
-Provides the glue between exernal services and their repos inside OPP,
-supports creating offers using the model concepts, and allows external
-parties to create the credentials needed to access the platform via
-the Auth service.
+Provides a service API as well as a browser-based GUI to support
+account creation and management by admins of external services and
+application clients built on top of OPP. From within the GUI external
+admins can sign up for an account, create organisations and services,
+manage client credentials required by services to authenticate, create
+repositories for services, and generate customised offers.
+
+#### agreement
+
+An offer agreed between a licensor and a user. Agreements are
+identified by OPP generated UUIDs.
+
+#### asset
+
+An [entity]() having potentially licenceable content. Assets are
+[onboarded]() to OPP by external application clients and
+services. Note that assets in this context consist of metadata that
+identifies content, and not the content itself. For example when a
+picture library service [onboards]() an asset it uploads metadata and
+identifiers that identify a picture held in its library; the picture
+image file itself is not uploaded.
 
 #### Auth Service
 
@@ -102,46 +114,42 @@ from unauthorised access. The [Auth Service](auth-toc.md) provides the
 endpoint that enables client services to authenticate and request
 tokens to authorise platform access, following an OAuth 2.0 flow.
 
-#### asset
-
-An [entity]() having potentially licenceable content. Assets are
-[onboarded]() to OPP by external application clients and
-services. Note that **assets** in this context consist of metadata
-that identifies content, and not the content itself. For example when
-a picture library service [onboards]() an asset it uploads metadata
-and identifiers that identify a picture held in its library; the
-picture image file itself is not uploaded.
-
-#### access token
-
-An OAuth 2.0 **access token** must be supplied to authorise access to
-an authenticated OPP API.
-
-#### bass
+#### Bass
 
 OPP libraries have fish names. This is a Python library used for
-creating unique hub keys used within the Open Permissions Platform.
+creating unique Hub Keys used within the Open Permissions Platform.
+ 
+#### Chub
 
-#### chub
-
-OPP libraries have fish names. Open Permissions Platform - Python
-Client An asynchronous client api to interface with the Open
-Permissions Platform RESTful services
+OPP libraries have fish names. This library defines an asynchronous
+Python client api to interface with the Open Permissions Platform
+RESTful services.
 
 #### client ID
 
+ID component of client credentials used by an external service to
+authenticate with an OPP instance
+
 #### client secret
+
+"Secret" component of client credentials used by an external service
+to authenticate with an OPP instance
 
 ### data model, see ontology
 
 #### entity
 
+Entities are the metadata objects that are onboarded to OPP, for
+example [assets](), [offers](), or [agreements](). An entity in OPP is
+always an instance of a supported entity type. Details of supported
+entity types and Hub Key structure can be found in the latest version
+of the [Hub Key Technical Specification](../arch/TECHSPEC_V1.md).
 
 #### external service
 
 An external service is either an application client or an external OPP
 instance or part-instance, for example a standalone external
-Repository microservice, that calls OPP endpoints.
+[Repository]() microservice, that calls OPP endpoints.
 
 #### federated search
 
@@ -156,12 +164,11 @@ multiple repositories.
 
 #### hub, hub-in-a-box
 
-A **hub** is an OPP instance, specifically one that runs the complete
-platform and manages repositories. **Hub-in-a-box** is a ready to run
-server image from which a **hub** can be spun up running on a single
-virtual server. This is in contrast to a **hub** in which each
+A hub is an OPP instance, specifically one that runs the complete
+platform and manages repositories. "Hub-in-a-box" is a ready to run
+server image from which a hub can be spun up running on a single
+virtual server. This is in contrast to a hub in which each
 [microservice]() runs on its own dedicated virtual server.
-
 
 #### Hub Key
 
@@ -177,30 +184,23 @@ OPP recognises a number of different identifiers, see the
 
 #### Identity Service
 
-Uses and various libs.
+The service that generates Hub Keys, supported by the [Bass]()
+library.
 
 #### Index Service
 
-Supports a periodically updated index that identifies which
-repositories contain a given entity, e.g. a specific asset.
+The routing service that tracks which assets have been onboarded to
+which [Repository]() services, and that maintains a cached index for
+quick retrieval.
 
 #### Koi
 
-OPP libraries have fish names. A library used in Open Permissions
-Platform services providing helpers and utilities for tornado
-applications
-
+OPP libraries have fish names. This a Python library that provides
+helpers and utilities for Tornado applications.
 
 #### licensor
 
 A party that has the right to offer an asset.
-
-#### licensor
-
-A licensor is a party that offers to license an asset, specifically
-anyone who creates an offer for an asset that has been onboarded to an
-OPP instance.
-
 
 #### microservice
 
@@ -221,33 +221,21 @@ OAuth 2.0.
 
 #### offer
 
-Permissions of use offered for an asset.
+An offer is a specification of the terms and conditions under which an
+asset is available for use, written as an ODRL expression using terms
+from the OPP data model. Offers are identified by OPP generated UUIDs.
 
-Offers are terms under which a licensor is willing to make an asset
-available to would-be users. Offers are identified by Hub Keys.
+Offers can be created by hand (which is complex!) and onboarded
+to an OPP repository using OPP services, or alternatively can be
+created using the Offer Configurator tool provided by the
+[Accounts Service]() GUI. Offers may be custom made for an individual
+service, or may be pre-defined generic offers, for example OPP
+includes a generic Creative Commons licence offer.
 
-#### Open Permissions Profile
-
-The [ODRL]() profile used by the Open Permissions Platform.
-
-
-#### Open Permissions
-
-The name of the platform.
-
-#### Open Permissions ODRL
-
-
-#### `offer_ids`
-
-UID that identifies an offer, supplied in the appropriate CSV field or
-JSON key:value pair to link an asset to an offer during onboarding or
-to update the link for a previously onboarded asset.
-
-#### offer configurator
+#### Offer Configurator
 
 Tool provided by the [Accounts Service]() GUI that allows an admin to
-generate and save an offer.
+generate and save an [offer]().
 
 #### ontology
 
@@ -255,40 +243,24 @@ OPP uses a plugin RDF ontology as a data model for the linked data it
 stores and manages. The ontology is defined by the **Open
 Permissions** profile extension to the W3C
 [ODRL](https://www.w3.org/community/odrl/) Version 2.1 Core Model
-policy language.
-
-#### OPP Ontology
-
-A logically-structured data dictionary containing all the terms required to support the representation of participants’ data in the OPP Ecosystem.
-
-The OPP ontology utilises the work of the W3C Open Digital Rights Language (ODRL) project. You can read more on ODRL here.
-
-
-
-#### offer
-
-An offer is a specification of the terms and conditions under which an
-asset is available for use, written as an ODRL expression using terms
-from the OPP data model. Offers can be created by hand (which is
-complex!) and onboarded to an OPP repository using OPP services, or
-alternatively can be created using the Offer Configurator tool
-provided by the **Accounts Service** GUI. Offers may be custom made
-for an individual service, or may be pre-defined generic offers, for
-example OPP includes a generic Creative Commons licence offer.
+policy language and is implemented in the
+[Open Permissions Profile]().
 
 #### Onboarding Service
 
-** requires authentication, to call its endpoints you must
+OPP microservice that enables clients to onboard i.e. upload entity
+data to OPP.
 
-#### OPP user
+#### Open Permissions Profile
 
-  1. Register as a **user** to acquire user credentials (name and
-    password)
+The [ODRL]() profile used by the Open Permissions Platform.
 
 #### organisation
 
-1. Login with your new account and create or join an **organisation**
-
+OPP accounts are administered by individual admin users on behalf of
+organisations. Services, i.e. external clients that call OPP API
+endpoints, are always created and managed within an Organisation
+account.
 
 #### repository
 
@@ -303,25 +275,7 @@ implementation. Typically repositories are accessed via the
 be called directly. Repositories are created and managed by external
 service admins using the **Accounts** service.
 
-
-#### RDF
-
-Dynamic model performs the mapping, uses cool tech, RDF and
-
-
-#### repository
-
-1. Create a **repository** for the service, the service is
-
-#### repository id
-
-#### SPARQL
-
-#### service
-
-1. Create a **service** owned by the organisation, the service is
-
-#### Services
+#### services
 
 The OPP exposes a small number of RESTful APIs to external
 clients. APIs are encapsulated as microservices. There are (at
@@ -330,17 +284,9 @@ Transformation, Resolution, Query, Auth and Accounts.
 
 #### source ID
 
-
-
-
 #### transformation
 
 #### Transformation Service
-
-of input output
-
-
-
 
 #### ??
 
@@ -350,3 +296,4 @@ of input output
 
 <!-- Copyright Notice -->
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
