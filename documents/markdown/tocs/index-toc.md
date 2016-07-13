@@ -4,7 +4,7 @@
 
 |||||||||||
 |----|---|---|---|---|---|---|---|---|---|
-|[Overview](index.md) | [Accounts Service](account-toc.md) | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | Index Service | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
+|[Overview](index.md) | [Accounts Service](account-toc.md) | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | Index Service | [Onboarding Service](onboard-toc.md) | [Query Service](query-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
 
 ### Index Service
 

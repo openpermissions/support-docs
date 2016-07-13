@@ -4,7 +4,7 @@
 
 |||||||||||
 |----|---|---|---|---|---|---|---|---|---|
-|Overview | [Accounts Service](account-toc.md) | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | [Index Service](index-toc.md) | [Query Service](query-toc.md) | [Onboarding Service](onboard-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
+|Overview | [Accounts Service](account-toc.md) | [Auth Service](auth-toc.md) | [Identity Service](identity-toc.md) | [Index Service](index-toc.md) | [Onboarding Service](onboard-toc.md) | [Query Service](query-toc.md) | [Repository Service](repository-toc.md) | [Resolution Service](resolution-toc.md) |  [Transformation Service](transformation-toc.md) |
 
 ### Welcome
 
@@ -28,10 +28,12 @@ For **client developers** writing application clients that integrate
 with an OPP instance, [the links below](#opp-apis) provide **How-tos**
 and **API references** for the OPP public APIs.
 
-If you are new to OPP, the
-[Getting started](../guides/getting-started.md) guide introduces basic
-platform concepts and provides ready-to-run code examples that will
-get you up and running quickly.
+If you are new to OPP:
++ [Open Permissions Platform Concepts](concepts.md) introduces and
+defines the main concepts and terminology used in OPP
++ [Getting started with OPP](../guides/getting-started.md) introduces
+the OPP APIs and provides ready-to-run code examples that will get you
+up and running quickly
 
 For developers who want to **deploy services** to support their own
 activities in the open licensing domain, we release ready-to-deploy
