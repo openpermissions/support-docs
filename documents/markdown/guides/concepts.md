@@ -53,7 +53,7 @@ OPP's primary client functions are to:
 Other [OPP services](#opp-services) and a small number of libraries
 provide supporting functionality.
 
-Hub Keys serve as smart identifiers which encode an entity's type,
+Hub Keys serve are identifiers which encode an entity's type,
 [repository](#repository) location, and other information. Hub Keys
 are also true URLs that can be resolved or redirected by the
 [Resolution Service](#resolution-service) to an individual web URI.
@@ -351,8 +351,8 @@ the [Repository Service](../tocs/repository-toc) API documentation.
 
 #### Transformation Service
 
-Transforms rights data expressed in non-XML RDF formats into valid
-XML. See the [Transformation Service](../tocs/transformation-toc) API
+Transforms rights data expressed in non compliant formats into a suitable format for ingestion into a repository.
+See the [Transformation Service](../tocs/transformation-toc) API
 documentation.
 
 <!-- Copyright Notice -->
