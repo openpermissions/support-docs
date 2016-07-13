@@ -29,8 +29,8 @@ with an OPP instance, [the links below](#opp-apis) provide **How-tos**
 and **API references** for the OPP public APIs.
 
 If you are new to OPP:
-+ [Open Permissions Platform Concepts](concepts.md) introduces and
-defines the main concepts and terminology used in OPP
++ [Open Permissions Platform Concepts](../guides/concepts.md)
+introduces and defines the main concepts and terminology used in OPP
 + [Getting started with OPP](../guides/getting-started.md) introduces
 the OPP APIs and provides ready-to-run code examples that will get you
 up and running quickly
